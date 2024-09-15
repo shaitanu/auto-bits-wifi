@@ -44,7 +44,7 @@ This Electron application automates the login process for Bits-WIFI Hyderabad. I
 
 6. **Logs:**
 
-- The application logs its activity in ===application.log=== for troubleshooting.
+- The application logs its activity in ```application.log``` for troubleshooting.
   
 ## Usage
 - The application will run in the system tray.

@@ -15,14 +15,15 @@ This Electron application automates the login process for Bits-WIFI Hyderabad. I
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/shaitanu/auto-bits-login.git
-   cd auto-bits-login
+   git clone https://github.com/shaitanu/auto-bits-wifi.git
+   cd auto-bits-wifi
    ```
 
 2. **Install Dependencies: Ensure you have Node.js installed. Then run:**
 
     ```bash
     npm install
+    npx playwright install
     ```
 3. **Run the Application: Start the application using:**
 

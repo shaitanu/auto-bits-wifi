@@ -1,0 +1,29 @@
+{
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "description": "A brief description of your app",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.yourapp",
+    "productName": "Your App Name",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "icon": "assets/icon.ico"
+  },
+  "devDependencies": {
+    "electron": "^32.1.0"
+  },
+  "dependencies": {
+    "ping": "^0.4.4",
+    "playwright": "^1.47.1",
+    "winston": "^3.14.2"
+  }
+}

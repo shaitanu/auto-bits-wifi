@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self';"
+    />
+    <title>Auto-Login Configuration</title>
+  </head>
+  <body>
+    <h1>Configure Auto-Login</h1>
+    <p>👋</p>
+
+    <!-- Input fields for username and password -->
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" />
+    </div>
+
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" />
+    </div>
+
+    <button id="save-btn">Save</button>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="renderer.js"></script>
+  </body>
+</html>

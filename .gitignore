@@ -3,3 +3,6 @@ node_modules/
 
 # Configuration file (if sensitive or environment-specific)
 config.json
+
+*.log
+*-audit.json

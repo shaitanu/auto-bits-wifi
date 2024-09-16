@@ -3,6 +3,7 @@ const path = require("path");
 const { chromium } = require("playwright");
 const ping = require("ping");
 const winston = require("winston");
+require("winston-daily-rotate-file");
 
 // Constants
 const PING_INTERVAL = 10000; // 10 seconds
@@ -15,21 +16,28 @@ let totalPings = 0;
 let totalDataConsumed = 0;
 let failedPingCount = 0; // Track consecutive ping failures
 
+const fileRotateTransport = new winston.transports.DailyRotateFile({
+  filename: "combined-%DATE%.log",
+  datePattern: "YYYY-MM-DD",
+  maxFiles: "14d",
+});
 // Set up winston logger
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
-    winston.format.timestamp(),
+    winston.format.timestamp((format = "YYYY-MM-DD HH:mm:ss")),
     winston.format.printf(({ timestamp, level, message }) => {
-      return `${timestamp} [${level}]: ${message}`;
+      const localTime = new Date(timestamp).toLocaleString();
+      return `${localTime} [${level}]: ${message}`;
     })
   ),
-  transports: [
-    new winston.transports.File({
-      filename: path.join(__dirname, "application.log"),
-    }),
-    new winston.transports.Console(), // Optional: log to console for development
-  ],
+
+  transports: [fileRotateTransport],
+  //transports: [
+  //new winston.transports.File({
+  //      filename: path.join(__dirname, "application.log"),
+  //}),
+  //],
 });
 
 // Function to read configuration

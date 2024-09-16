@@ -14,6 +14,7 @@ This Electron application automates the login process for Bits-WIFI Hyderabad. I
 ## Setup Instructions
 
 1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/shaitanu/auto-bits-wifi.git
    cd auto-bits-wifi
@@ -21,15 +22,17 @@ This Electron application automates the login process for Bits-WIFI Hyderabad. I
 
 2. **Install Dependencies: Ensure you have Node.js installed. Then run:**
 
-    ```bash
-    npm install
-    npx playwright install
-    ```
+   ```bash
+   npm install
+   npx playwright install
+   ```
+
 3. **Run the Application: Start the application using:**
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
+
 4. **Initial Setup:**
 
 - If config.json is not found, the application will prompt you to enter your credentials.
@@ -44,13 +47,14 @@ This Electron application automates the login process for Bits-WIFI Hyderabad. I
 
 6. **Logs:**
 
-- The application logs its activity in ```application.log``` for troubleshooting.
-  
+- The application logs its activity for troubleshooting.
+
 ## Usage
+
 - The application will run in the system tray.
 - You can interact with it via the tray icon.
 
 ## Notes
+
 - Ensure config.json is added to .gitignore to keep your credentials secure.
 - The node_modules directory is not included in the repository to save space and reduce clutter.
-  
